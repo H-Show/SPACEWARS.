@@ -9,6 +9,7 @@ public class Player : MonoBehaviourPunCallbacks
     public float speed = 1;
     [SerializeField] private float RoteSpeed = 1;
     [SerializeField] private float MaxRotate = 10f;
+    public Bullet script;
     public GameObject Bullet;
     public float minangle = -10f;
     public float maxangle = 10f;
@@ -55,10 +56,9 @@ public class Player : MonoBehaviourPunCallbacks
         if (Input.GetMouseButtonDown(0))
         {
             // íeÇÃê∂ê¨
-
-            Instantiate(Bullet, transform.position + bulletPoint, Quaternion.identity);
-            Bullet.GetComponent<Bullet>().OnMouseDown();
-            Bullet.GetComponent<Bullet>().OnceCheck = true;
+            script.shot();
+            //Instantiate(Bullet, transform.position + bulletPoint, Quaternion.identity);
+           
         }
     }
 }

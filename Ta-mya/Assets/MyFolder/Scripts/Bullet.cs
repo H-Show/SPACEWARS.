@@ -4,35 +4,29 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public bool OnceCheck = true;
-    private Vector3 mousePos;
+    private Rigidbody rb;
     public float MoveSpeed = 2.0f;
-    private Vector3 touchWorldPosition;
+    public GameObject BulletObj;
+
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
+
         // 弾の移動
-        this.transform.position = Vector3.MoveTowards(this.transform.position, touchWorldPosition, MoveSpeed * Time.deltaTime);
+        rb.velocity = transform.forward * MoveSpeed;
     }
 
-    public void OnMouseDown()
+    public void shot()
     {
-        // 一回だけ
-        if(OnceCheck == true)
-        {
-            // マウスのポジションをVector3に代入
-            Vector3 touchScreenPosition = Input.mousePosition;
-            // 奥行きの追加
-            touchScreenPosition.z = 60f;
-            Camera camera = Camera.main;
-            touchWorldPosition = camera.ScreenToWorldPoint(touchScreenPosition);
-            OnceCheck = false;
-        }
-
+        // 弾の生成
+        //Instantiate(BulletObj, transform.position, transform.rotation);
+        GameObject prefab = (GameObject)Resources.Load("Prefabs/Bullet");
+        GameObject cloneObject = Instantiate(prefab, this.transform.position, Quaternion.identity);
     }
 }
