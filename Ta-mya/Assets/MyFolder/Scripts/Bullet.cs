@@ -9,6 +9,8 @@ public class Bullet : MonoBehaviour
     public Quaternion firstRotation;
     public float speedY = 100;
 
+    public float deleteTime;
+
     private Rigidbody rb;
     public float MoveSpeed = 2.0f;
     public GameObject BulletObj;
@@ -42,13 +44,9 @@ public class Bullet : MonoBehaviour
 
         // íeÇÃà⁄ìÆ
         rb.velocity = transform.forward * MoveSpeed;
+
+        Destroy(gameObject, deleteTime);
     }
 
-    public void shot()
-    {
-        // íeÇÃê∂ê¨
-        //Instantiate(BulletObj, transform.position, transform.rotation);
-        GameObject prefab = (GameObject)Resources.Load("Prefabs/Bullet");
-        GameObject cloneObject = Instantiate(prefab, this.transform.position, Quaternion.identity);
-    }
+    
 }

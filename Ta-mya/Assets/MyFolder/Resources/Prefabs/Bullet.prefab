@@ -111,6 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstRotation: {x: 0, y: 0, z: 0, w: 0}
   speedY: 100
+  deleteTime: 3
   MoveSpeed: 20
   BulletObj: {fileID: 8518147980204762918}
 --- !u!54 &-3136920424432349298
