@@ -1,35 +1,46 @@
 using Photon.Pun;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviourPunCallbacks
 {
-    // 自機の移動速度を格納する変数（初期値 1）
+    // 移動速度を格納する変数
     public float speed = 1;
-    [SerializeField] private float RoteSpeed = 1;
-    [SerializeField] private float MaxRotate = 10f;
-    //public Bullet script;
-    public GameObject bullet;
-    public float minangle = -10f;
-    public float maxangle = 10f;
-    Vector3 rotEuler;
-
+    // 弾の発射間隔
+    [SerializeField] private float _timeInterval;
+    // 経過時間取得用変数
+    private float _timeElapsed;
+    // マウスホイールの回転数取得用変数
+    private float MousWheel;
+    // 特殊攻撃用経過時間格納変数
+    private float SkillTime;
+    // 特殊攻撃のクールタイム
+    [SerializeField] private float SkillInterval;
+    // 特殊攻撃選択用変数
+    private int BulletSelect;
+    // 特殊攻撃の弾のプレファブ格納
+    //[SerializeField] private List<GameObject> BulletList = new List<GameObject>();
+    [SerializeField] private GameObject[] SpecialBullet;
+    // 特殊攻撃の弾ごとのクールタイム格納用
+    private List<bool> Reload = new List<bool>();
     Vector3 bulletPoint;
 
-    // ゲームのスタート時の処理
     void Start()
     {
-        //rotEuler = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, 0f);
-        //bulletPoint = transform.Find("BulletPoint").localPosition;
-        //Bullet = GameObject.Find("Bullet");
+        // Listに情報を追加(ture:発射可能、false:クールタイム中)
+        Reload.Add(true);   // 特殊攻撃1
+        Reload.Add(true);   // 特殊攻撃2
+        Reload.Add(true);   // 特殊攻撃3
+        Reload.Add(true);   // 特殊攻撃4
+        Debug.Log(Reload.Count);
     }
 
-    // ゲーム実行中の繰り返し処理
     void Update()
     {
-
-
+        // 移動処理
+        #region 移動
         if (Input.GetKey(KeyCode.D))
         {
             transform.position += transform.right * speed * Time.deltaTime;
@@ -54,12 +65,46 @@ public class Player : MonoBehaviourPunCallbacks
         {
             transform.position -= transform.up * speed * Time.deltaTime;
         }
-        if (Input.GetMouseButtonDown(0))
+        #endregion
+
+        // 特殊攻撃処理
+        #region 特殊攻撃
+        // マウスの回転数取得(回転させるたびに1ずつ増減する デフォルトは0)
+            MousWheel += Input.GetAxis("Mouse ScrollWheel");
+            MousWheel = Mathf.Floor(MousWheel);
+            MousWheel = Mathf.Clamp(MousWheel, 0.0f, 4.0f);
+
+        //Debug.Log(MousWheel);
+
+        #endregion
+
+        // 弾発射
+        #region 弾の発射
+        _timeElapsed += Time.deltaTime;
+
+        if (_timeElapsed > _timeInterval)
         {
             shot();
+            // 経過時間を元に戻す
+            _timeElapsed = 0f;
+        }
+        #endregion
+        // 特殊攻撃の弾選択処理と発射処理への移動(マウス左クリックで発射)
+        if(MousWheel > 0)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                Debug.Log(MousWheel);
+                BulletSelect = (int)MousWheel;
+                if (Reload[BulletSelect - 1] == true)
+                {
+                    SpecialAttack(BulletSelect);
+                }
+            }
         }
     }
 
+    // 弾発射用の処理関数
     public void shot()
     {
         //弾を出現させる位置を取得
@@ -76,7 +121,47 @@ public class Player : MonoBehaviourPunCallbacks
         //弾を出現させる位置を調整
         placePosition = q1 * offsetGun + placePosition;
         //弾生成！
-        Instantiate(bullet, placePosition, Quaternion.identity);
+        Instantiate(SpecialBullet[0], placePosition, Quaternion.identity);
+    }
+
+    // 特殊攻撃処理関数(引数は発射する特殊攻撃の弾の種類)
+    public void SpecialAttack(int BulletSelection)
+    {
+        // 発射後falseに変更
+        Reload[BulletSelect - 1] = false;
+
+        //弾を出現させる位置を取得
+        Vector3 placePosition = this.transform.position;
+        //出現させる位置をずらす値
+        Vector3 offsetGun = new Vector3(0, 0, 2);
+
+        //武器の向きに合わせて弾の向きも調整
+        Quaternion q1 = this.transform.rotation;
+        //弾を90度回転させる処理
+        Quaternion q2 = Quaternion.AngleAxis(90, new Vector3(1, 0, 0));
+        Quaternion q = q1 * q2;
+
+        //弾を出現させる位置を調整
+        placePosition = q1 * offsetGun + placePosition;
+        //弾生成！
+        Instantiate(SpecialBullet[BulletSelection], placePosition, Quaternion.identity);
+        
+        // クールタイム開始
+        StartCoroutine(CoolTime());
+    }
+
+    // クールタイム処理コルーチン
+    private IEnumerator CoolTime()
+    {
+        // クールタイム開始
+        //Debug.Log("クールタイム開始");
+
+        // ２秒待機
+        yield return new WaitForSeconds(2);
+
+        // false → trueに変更
+        Reload[BulletSelect - 1] = true;
+        //Debug.Log("クールタイム終了");
     }
 }
 
