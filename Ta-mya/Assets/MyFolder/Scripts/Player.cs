@@ -22,10 +22,11 @@ public class Player : MonoBehaviourPunCallbacks
     private int BulletSelect;
     // 特殊攻撃の弾のプレファブ格納
     //[SerializeField] private List<GameObject> BulletList = new List<GameObject>();
-    [SerializeField] private GameObject[] SpecialBullet;
-    // 特殊攻撃の弾ごとのクールタイム格納用
+    [SerializeField] private GameObject[] Bullet;
+    // 特殊攻撃の弾ごとのクールタイム確認格納用
     private List<bool> Reload = new List<bool>();
     Vector3 bulletPoint;
+
 
     void Start()
     {
@@ -67,15 +68,12 @@ public class Player : MonoBehaviourPunCallbacks
         }
         #endregion
 
-        // 特殊攻撃処理
+        // 特殊攻撃選択処理
         #region 特殊攻撃
         // マウスの回転数取得(回転させるたびに1ずつ増減する デフォルトは0)
             MousWheel += Input.GetAxis("Mouse ScrollWheel");
             MousWheel = Mathf.Floor(MousWheel);
             MousWheel = Mathf.Clamp(MousWheel, 0.0f, 4.0f);
-
-        //Debug.Log(MousWheel);
-
         #endregion
 
         // 弾発射
@@ -104,7 +102,7 @@ public class Player : MonoBehaviourPunCallbacks
         }
     }
 
-    // 弾発射用の処理関数
+    // 通常弾発射処理関数
     public void shot()
     {
         //弾を出現させる位置を取得
@@ -120,8 +118,8 @@ public class Player : MonoBehaviourPunCallbacks
 
         //弾を出現させる位置を調整
         placePosition = q1 * offsetGun + placePosition;
-        //弾生成！
-        Instantiate(SpecialBullet[0], placePosition, Quaternion.identity);
+        //弾生成
+        Instantiate(Bullet[0], placePosition, Quaternion.identity);
     }
 
     // 特殊攻撃処理関数(引数は発射する特殊攻撃の弾の種類)
@@ -143,8 +141,8 @@ public class Player : MonoBehaviourPunCallbacks
 
         //弾を出現させる位置を調整
         placePosition = q1 * offsetGun + placePosition;
-        //弾生成！
-        Instantiate(SpecialBullet[BulletSelection], placePosition, Quaternion.identity);
+        //弾生成
+        Instantiate(Bullet[BulletSelection], placePosition, Quaternion.identity);
         
         // クールタイム開始
         StartCoroutine(CoolTime());
@@ -156,7 +154,7 @@ public class Player : MonoBehaviourPunCallbacks
         // クールタイム開始
         //Debug.Log("クールタイム開始");
 
-        // ２秒待機
+        // 待機時間
         yield return new WaitForSeconds(2);
 
         // false → trueに変更
