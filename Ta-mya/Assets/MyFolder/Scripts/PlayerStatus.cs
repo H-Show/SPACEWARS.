@@ -27,6 +27,6 @@ public class Playersta : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
