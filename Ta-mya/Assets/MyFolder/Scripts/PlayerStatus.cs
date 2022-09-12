@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
-public class Playersta : MonoBehaviour
+public class PlayerStatus : MonoBehaviour
 {
     public class PlayerData
     {
@@ -28,5 +29,17 @@ public class Playersta : MonoBehaviour
     void Update()
     {
 
+    }
+
+    public void savePlayerData(PlayerData battleShip1)
+    {
+        StreamWriter writer;
+
+        string jsonstr = JsonUtility.ToJson(battleShip1);
+
+        writer = new StreamWriter(Application.dataPath + "/savedata.json", false);
+        writer.Write(jsonstr);
+        writer.Flush();
+        writer.Close();
     }
 }
