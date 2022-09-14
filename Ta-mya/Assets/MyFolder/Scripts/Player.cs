@@ -1,10 +1,9 @@
-using Photon.Pun;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviourPunCallbacks
+public class Player : MonoBehaviour
 {
     // ˆÚ“®‘¬“x‚ğŠi”[‚·‚é•Ï”
     public float speed = 1;

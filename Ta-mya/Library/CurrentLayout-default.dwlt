@@ -121,7 +121,11 @@ MonoBehaviour:
   m_MinSize: {x: 709, y: 613}
   m_MaxSize: {x: 18004, y: 18063}
   vertical: 1
+<<<<<<< Updated upstream
   controlID: 17
+=======
+  controlID: 181
+>>>>>>> Stashed changes
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -146,7 +150,11 @@ MonoBehaviour:
   m_MinSize: {x: 709, y: 613}
   m_MaxSize: {x: 18004, y: 18063}
   vertical: 0
+<<<<<<< Updated upstream
   controlID: 18
+=======
+  controlID: 182
+>>>>>>> Stashed changes
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -171,7 +179,11 @@ MonoBehaviour:
   m_MinSize: {x: 201, y: 442}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
+<<<<<<< Updated upstream
   controlID: 66
+=======
+  controlID: 190
+>>>>>>> Stashed changes
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +260,11 @@ MonoBehaviour:
   m_MinSize: {x: 508, y: 613}
   m_MaxSize: {x: 14003, y: 18063}
   vertical: 1
+<<<<<<< Updated upstream
   controlID: 19
+=======
+  controlID: 183
+>>>>>>> Stashed changes
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -273,7 +289,11 @@ MonoBehaviour:
   m_MinSize: {x: 508, y: 492}
   m_MaxSize: {x: 14003, y: 14042}
   vertical: 0
+<<<<<<< Updated upstream
   controlID: 20
+=======
+  controlID: 184
+>>>>>>> Stashed changes
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -298,7 +318,11 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
+<<<<<<< Updated upstream
   controlID: 135
+=======
+  controlID: 130
+>>>>>>> Stashed changes
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -528,9 +552,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -14.771936, y: -4.410512, z: 6.651059}
+    m_Target: {x: 0, y: 15.865772, z: -16.824417}
     speed: 2
-    m_Value: {x: -14.771936, y: -4.410512, z: 6.651059}
+    m_Value: {x: 0, y: 15.865772, z: -16.824417}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -581,9 +605,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0.40419582, y: 0.23697276, z: -0.109236315, w: 0.87666243}
   m_Size:
-    m_Target: 32.14614
+    m_Target: 8.420523
     speed: 2
-    m_Value: 32.14614
+    m_Value: 8.420523
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -638,7 +662,11 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 9c070000
       m_LastClickedID: 0
+<<<<<<< Updated upstream
       m_ExpandedIDs: 4cfbffff
+=======
+      m_ExpandedIDs: 4afbffff
+>>>>>>> Stashed changes
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -712,10 +740,17 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< Updated upstream
     scrollPos: {x: 0, y: 94}
     m_SelectedIDs: 42410000
     m_LastClickedID: 16706
     m_ExpandedIDs: 000000001c4100001e41000020410000224100002441000026410000284100002a4100002c4100002e4100004041000000ca9a3b
+=======
+    scrollPos: {x: 0, y: 62}
+    m_SelectedIDs: 86410000
+    m_LastClickedID: 16774
+    m_ExpandedIDs: 00000000624100006441000066410000684100006a4100006c4100006e41000070410000844100008e4100002844000000ca9a3b
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -743,7 +778,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< Updated upstream
     m_ExpandedIDs: 000000001c4100001e41000020410000224100002441000026410000284100002a4100002c4100002e410000
+=======
+    m_ExpandedIDs: 00000000624100006441000066410000684100006a4100006c4100006e4100007041000072410000
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -774,15 +813,24 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: 48590000943f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
+<<<<<<< Updated upstream
       m_Name: 
       m_OriginalName: 
+=======
+      m_Name: FriendShipInfo
+      m_OriginalName: FriendShipInfo
+>>>>>>> Stashed changes
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
+<<<<<<< Updated upstream
       m_UserData: 0
+=======
+      m_UserData: 30208
+>>>>>>> Stashed changes
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 11
