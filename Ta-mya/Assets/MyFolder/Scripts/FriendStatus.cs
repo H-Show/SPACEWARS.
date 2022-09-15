@@ -7,7 +7,6 @@ using UnityEngine;
 //[CreateAssetMenu(fileName = "Database", menuName = "子機データ/Database")]
 public class FriendStatus : MonoBehaviour
 {
-    //敵を格納する構造体
     public struct FriendStatusData
     {
         public string name;

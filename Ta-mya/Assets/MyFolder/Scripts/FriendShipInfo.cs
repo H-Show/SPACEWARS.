@@ -29,8 +29,8 @@ public class FriendShipInfo
         //各変数へデータを格納
         for (int i = 1; i < FriendShipData.Count; i++)//エネミーIDが記述された最後まで読み込み。一行目はタイトルなのでi=0はデータとして扱わない
         {            
-            Name[i] = FriendShipData[i][1];
-            HP[i] = int.Parse(FriendShipData[i][0]);//string型からint型へ変換
+            Name[i] = FriendShipData[i][0];
+            HP[i] = int.Parse(FriendShipData[i][1]);//string型からint型へ変換
             DEF[i] = int.Parse(FriendShipData[i][2]);
             SPD[i] = int.Parse(FriendShipData[i][3]);
         }
