@@ -992,6 +992,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5135165237628286786, guid: 60cf626d46732f745b22a597f1f8c75e, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 5135706840660869771, guid: 60cf626d46732f745b22a597f1f8c75e, type: 3}
       propertyPath: bullet
       value: 
@@ -1131,7 +1135,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1824972043381806, guid: 38b63c01674358b448b15ee3a56538f5, type: 3}
       propertyPath: m_Name
-      value: StarSparrow6
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1824972043381806, guid: 38b63c01674358b448b15ee3a56538f5, type: 3}
+      propertyPath: m_TagString
+      value: Eemy
       objectReference: {fileID: 0}
     - target: {fileID: 4317271542249194, guid: 38b63c01674358b448b15ee3a56538f5, type: 3}
       propertyPath: m_RootOrder
