@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
-{    
+{
+    public int hp;
     // 弾の発射間隔
     [SerializeField] private float _timeInterval;
     // 経過時間取得用変数
@@ -32,7 +33,7 @@ public class Enemy : MonoBehaviour
         //弾を出現させる位置を取得
         Vector3 placePosition = this.transform.position;
         //出現させる位置をずらす値
-        Vector3 offsetGun = new Vector3(0, 0, 2);
+        Vector3 offsetGun = new Vector3(0, 0, 8);
 
         //武器の向きに合わせて弾の向きも調整
         Quaternion q1 = this.transform.rotation;
