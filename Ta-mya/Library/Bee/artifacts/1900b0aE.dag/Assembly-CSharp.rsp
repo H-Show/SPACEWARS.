@@ -345,6 +345,7 @@
 "Assets/Asset/SpaceShip/StarSparrow/Readme/Readme Files/Scripts/ReadmeStarSparrow.cs"
 "Assets/MyFolder/Scripts/Bullet.cs"
 "Assets/MyFolder/Scripts/child.cs"
+"Assets/MyFolder/Scripts/Enemy.cs"
 "Assets/MyFolder/Scripts/FriendShipInfo.cs"
 "Assets/MyFolder/Scripts/FriendShipSelect.cs"
 "Assets/MyFolder/Scripts/FriendStatus.cs"

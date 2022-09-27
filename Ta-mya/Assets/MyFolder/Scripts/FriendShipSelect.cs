@@ -17,7 +17,7 @@ public class FriendShipSelect : MonoBehaviour
     private FriendShipInfo statusInfo;
     private int count = 0;
     [SerializeField] private int[] SelectNum = new int[3];
-    public string[] Name = new string[3];
+    public string[] Name = new string[30];
     public int[] HP = new int[3];
     public int[] DEF = new int[3];
     public int[] SPD = new int[3];
