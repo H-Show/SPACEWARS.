@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/FomationScenes/SelectScenes.unity
+    guid: fa1e916432e0f3c45894e7117aff6a3c
+  - enabled: 1
+    path: Assets/Scenes/FomationScenes/Development.unity
+    guid: ce868e9801a369a468f77b457ba70c63
+  - enabled: 1
+    path: Assets/Scenes/FomationScenes/Formation.unity
+    guid: e4be927ea15bf354a8ca36688c7e27ce
+  - enabled: 1
+    path: Assets/Scenes/FomationScenes/SpecialAttack.unity
+    guid: 9cae0d7e6aafdb344aab444c35dfddc4
   m_configObjects: {}
