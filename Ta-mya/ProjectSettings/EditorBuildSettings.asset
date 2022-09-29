@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FomationScenes/SpecialAttack.unity
     guid: 9cae0d7e6aafdb344aab444c35dfddc4
+  - enabled: 1
+    path: Assets/Scenes/BaseCityScene.unity
+    guid: ec4214cc06e6a5347963d743221991a4
   m_configObjects: {}

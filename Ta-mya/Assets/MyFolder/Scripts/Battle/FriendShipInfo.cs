@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using UnityEngine;
 
@@ -11,6 +12,7 @@ public class FriendShipInfo
     public int[] HP = new int[100];
     public int[] DEF = new int[100];
     public int[] SPD = new int[100];
+    public bool Ones = false;
     // Start is called before the first frame update
     static void CsvReader()
     {
@@ -25,14 +27,27 @@ public class FriendShipInfo
 
     public void Init()
     {
-        CsvReader();//enemyDataへ情報を一時格納
-        //各変数へデータを格納
-        for (int i = 1; i < FriendShipData.Count; i++)//エネミーIDが記述された最後まで読み込み。一行目はタイトルなのでi=0はデータとして扱わない
-        {            
-            Name[i] = FriendShipData[i][0];
-            HP[i] = int.Parse(FriendShipData[i][1]);//string型からint型へ変換
-            DEF[i] = int.Parse(FriendShipData[i][2]);
-            SPD[i] = int.Parse(FriendShipData[i][3]);
+        if(Ones == false)
+        {
+            CsvReader();//情報を一時格納
+                        //各変数へデータを格納　CSVファイル内の行数分読み込み（全ステータスデータ）
+            for (int i = 1; i < FriendShipData.Count; i++)
+            {
+                Name[i] = FriendShipData[i][0];
+                HP[i] = System.Int32.Parse(FriendShipData[i][1]);//string型からint型へ変換
+                DEF[i] = int.Parse(FriendShipData[i][2]);
+                SPD[i] = int.Parse(FriendShipData[i][3]);
+                int num = 0;
+
+            }
+            Ones = true;
         }
+    }
+
+    public void Delete()
+    {
+     HP = new int[100];
+     DEF = new int[100];
+     SPD = new int[100];
     }
 }

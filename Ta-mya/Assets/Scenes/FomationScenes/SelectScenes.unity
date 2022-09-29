@@ -690,7 +690,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 7
   m_TargetDisplay: 0
 --- !u!224 &747596594
 RectTransform:
@@ -1218,7 +1218,7 @@ MonoBehaviour:
       - m_Target: {fileID: 747596595}
         m_TargetAssemblyTypeName: ScenesManager, Assembly-CSharp
         m_MethodName: OnClickBackButton
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

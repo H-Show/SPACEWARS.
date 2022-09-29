@@ -26,9 +26,34 @@ public class ScenesManager : MonoBehaviour
         SceneManager.LoadScene("SpecialAttack");
     }
 
-    public void OnClickBackButton()
+    public void OnclickBaseButton()
     {
-//        SceneManager.LoadScene("移動先のシーン");       
+        SceneManager.LoadScene("BaseCityScene");
+    }
+
+    public void OnClickBackButton(int Num)
+    {
+        switch (Num)
+        {
+            case 0:
+                SceneManager.LoadScene("BaseCityScene");
+                break;
+            case 1:
+                SceneManager.LoadScene("SelectScenes");
+                break;
+            case 2:
+                SceneManager.LoadScene("Formation");
+                break;
+            case 3:
+                SceneManager.LoadScene("SpecialAttack");
+                break;
+            case 4:
+                SceneManager.LoadScene("Development");
+                break;
+            default:
+                break;
+        }
+        ;       
     }
 
     // シーン遷移処理(バトル)
