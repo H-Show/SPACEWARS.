@@ -352,6 +352,7 @@
 "Assets/MyFolder/Scripts/MousePosition.cs"
 "Assets/MyFolder/Scripts/Player.cs"
 "Assets/MyFolder/Scripts/PlayerStatus.cs"
+"Assets/MyFolder/Scripts/Trun.cs"
 "Assets/Photon/PhotonChat/Demos/Common/EventSystemSpawner.cs"
 "Assets/Photon/PhotonChat/Demos/Common/OnStartDelete.cs"
 "Assets/Photon/PhotonChat/Demos/Common/TextButtonTransition.cs"

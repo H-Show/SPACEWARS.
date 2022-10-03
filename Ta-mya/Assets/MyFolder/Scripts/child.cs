@@ -24,14 +24,6 @@ public class child : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.position += transform.right * speed * Time.deltaTime;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.position -= transform.right * speed * Time.deltaTime;
-        }
         if (Input.GetKey(KeyCode.W))
         {
             transform.position += transform.forward * speed * Time.deltaTime;
@@ -75,6 +67,6 @@ public class child : MonoBehaviour
         //íeÇèoåªÇ≥ÇπÇÈà íuÇí≤êÆ
         placePosition = q1 * offsetGun + placePosition;
         //íeê∂ê¨ÅI
-        Instantiate(bullet, placePosition, Quaternion.identity);
+        Instantiate(bullet, transform.position, transform.rotation);
     }
 }

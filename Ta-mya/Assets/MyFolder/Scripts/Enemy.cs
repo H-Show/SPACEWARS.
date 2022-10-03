@@ -44,6 +44,6 @@ public class Enemy : MonoBehaviour
         //’e‚ğoŒ»‚³‚¹‚éˆÊ’u‚ğ’²®
         placePosition = q1 * offsetGun + placePosition;
         //’e¶¬
-        Instantiate(Bullet[0], placePosition, q);
+        Instantiate(Bullet[0], this.transform.position, this.transform.rotation);
     }
 }

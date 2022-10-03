@@ -63,12 +63,12 @@ public class Bullet : MonoBehaviour
 
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("ヒット");
+            //Debug.Log("ヒット");
             Player = GameObject.Find("Player");
             playersc = Player.GetComponent<Player>();
             playersc.hp = playersc.hp - BulletDamage;
-            Debug.Log(BulletDamage + "ダメージ");
-            Debug.Log("現在のHP" + playersc.hp);
+            //Debug.Log(BulletDamage + "ダメージ");
+            //Debug.Log("現在のHP" + playersc.hp);
         }
     }
 

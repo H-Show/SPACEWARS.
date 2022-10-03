@@ -19,6 +19,9 @@ public class Player : MonoBehaviour
     private float SkillTime;
     // “ÁêUŒ‚‚ÌƒN[ƒ‹ƒ^ƒCƒ€
     [SerializeField] private float SkillInterval;
+    private float MinAngle = -30;
+    private float MaxAngle = 30;
+    private float RotateSpeed = 1;
     // “ÁêUŒ‚‘I‘ğ—p•Ï”
     private int BulletSelect;
     // “ÁêUŒ‚‚Ì’e‚ÌƒvƒŒƒtƒ@ƒuŠi”[
@@ -43,16 +46,10 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+
         // ˆÚ“®ˆ—
         #region ˆÚ“®
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.position += transform.right * speed * Time.deltaTime;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.position -= transform.right * speed * Time.deltaTime;
-        }
+
         if (Input.GetKey(KeyCode.W))
         {
             transform.position += transform.forward * speed * Time.deltaTime;
@@ -122,7 +119,8 @@ public class Player : MonoBehaviour
         //’e‚ğoŒ»‚³‚¹‚éˆÊ’u‚ğ’²®
         placePosition = q1 * offsetGun + placePosition;
         //’e¶¬
-        Instantiate(Bullet[0], placePosition, Quaternion.identity);
+        //Instantiate(Bullet[0], placePosition, Quaternion.identity);
+        Instantiate(Bullet[0], this.transform.position, this.transform.rotation);
     }
 
     // “ÁêUŒ‚ˆ—ŠÖ”(ˆø”‚Í”­Ë‚·‚é“ÁêUŒ‚‚Ì’e‚Ìí—Ş)
