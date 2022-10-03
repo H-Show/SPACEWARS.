@@ -45,14 +45,6 @@ public class Player : MonoBehaviour
     {
         // ˆÚ“®ˆ—
         #region ˆÚ“®
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.position += transform.right * speed * Time.deltaTime;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.position -= transform.right * speed * Time.deltaTime;
-        }
         if (Input.GetKey(KeyCode.W))
         {
             transform.position += transform.forward * speed * Time.deltaTime;
@@ -122,7 +114,7 @@ public class Player : MonoBehaviour
         //’e‚ğoŒ»‚³‚¹‚éˆÊ’u‚ğ’²®
         placePosition = q1 * offsetGun + placePosition;
         //’e¶¬
-        Instantiate(Bullet[0], placePosition, Quaternion.identity);
+        Instantiate(Bullet[0], transform.position, transform.rotation);
     }
 
     // “ÁêUŒ‚ˆ—ŠÖ”(ˆø”‚Í”­Ë‚·‚é“ÁêUŒ‚‚Ì’e‚Ìí—Ş)
