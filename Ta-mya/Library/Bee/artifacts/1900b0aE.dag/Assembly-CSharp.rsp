@@ -353,6 +353,7 @@
 "Assets/MyFolder/Scripts/Battle/MousePosition.cs"
 "Assets/MyFolder/Scripts/Battle/Player.cs"
 "Assets/MyFolder/Scripts/Battle/PlayerStatus.cs"
+"Assets/MyFolder/Scripts/City/Building.cs"
 "Assets/MyFolder/Scripts/Fomation/FriendShipSelect.cs"
 "Assets/MyFolder/Scripts/Fomation/ScenesManager.cs"
 "Assets/Photon/PhotonChat/Demos/Common/EventSystemSpawner.cs"
