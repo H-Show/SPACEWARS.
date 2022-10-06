@@ -34,6 +34,8 @@ public class FriendShipSelect : MonoBehaviour
     public int[] SPD = new int[3];
     // どのボタンを押されたか判定する変数
     private int number;
+    // 押された番号を送信する用変数
+    public static int ShipNumber;
     // テキスト格納
     [SerializeField] private TextMeshProUGUI NameText;
     [SerializeField] private TextMeshProUGUI HPText;
@@ -78,9 +80,11 @@ public class FriendShipSelect : MonoBehaviour
         {    
             // 0は読まないからcase1からスタート
             case 1:
+                SetData(Num);
                 Display(Num);
                 break;
             case 2:
+                SetData(Num);
                 Display(Num);
                 break;
             default:
@@ -97,4 +101,11 @@ public class FriendShipSelect : MonoBehaviour
         DEFText.SetText("DEF:{0}", statusInfo.DEF[number]);
         SPDText.SetText("SPD:{0}", statusInfo.SPD[number]);
     }
+
+    // 値の代入処理
+    private void SetData(int SelectNum)
+    {
+        ShipNumber = SelectNum;
+    }
+
 }
