@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/BaseCityScene.unity
+- path: Assets/Ground materials FD/Example/Example.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
