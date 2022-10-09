@@ -63,6 +63,7 @@
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\AppSettingsExtensions.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\NamePickGui.cs" />
+    <Compile Include="Assets\MyFolder\Scripts\City\BuildingSet.cs" />
     <Compile Include="Assets\Asset\SpaceShip\StarSparrow\Readme\Readme Files\Scripts\ReadmeStarSparrow.cs" />
     <Compile Include="Assets\MyFolder\Scripts\Battle\CreateShip.cs" />
     <Compile Include="Assets\MyFolder\Scripts\Battle\FriendShipInfo.cs" />
@@ -81,7 +82,6 @@
     <Compile Include="Assets\MyFolder\Scripts\Battle\child.cs" />
     <Compile Include="Assets\MyFolder\Scripts\Battle\Turn.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
-    <Compile Include="Assets\MyFolder\Scripts\City\BuildingSet.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
