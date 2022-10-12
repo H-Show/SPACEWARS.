@@ -17,7 +17,7 @@ public class BuildingSet : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            //Instantiate( 生成するオブジェクト,  場所, 回転 );
+            //Instantiate
             Instantiate(obj, new Vector3(320.0f, 10.0f, 300.0f), Quaternion.identity);
         }
     }
