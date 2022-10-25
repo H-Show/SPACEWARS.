@@ -34,7 +34,7 @@ public class FriendShipInfo
             for (int i = 1; i < FriendShipData.Count; i++)
             {
                 Name[i] = FriendShipData[i][0];
-                HP[i] = System.Int32.Parse(FriendShipData[i][1]);//stringŒ^‚©‚çintŒ^‚Ö•ÏŠ·
+                HP[i]  = int.Parse(FriendShipData[i][1]);//stringŒ^‚©‚çintŒ^‚Ö•ÏŠ·
                 DEF[i] = int.Parse(FriendShipData[i][2]);
                 SPD[i] = int.Parse(FriendShipData[i][3]);
                 int num = 0;

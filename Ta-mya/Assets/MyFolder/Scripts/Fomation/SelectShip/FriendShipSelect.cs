@@ -54,46 +54,18 @@ public class FriendShipSelect : MonoBehaviour
     // 戦闘シーン開始時に味方機を生成する際に使用
     private void CreateShip()
     {
-        //while(count < 3)
-        //{
         // StatusInには代入するだけ、SelectNumはcount番目に選択された番号の情報を読み込む
-            Name[count] = statusInfo.Name[SelectNum[count]];
-            HP[count] = statusInfo.HP[SelectNum[count]];
-            DEF[count] = statusInfo.DEF[SelectNum[count]];
-            SPD[count] = statusInfo.SPD[SelectNum[count]];
-
-            //Debug.Log("機体1:" + Name[count]);
-            //Debug.Log("機体1:" + HP[count]);
-            //Debug.Log("機体1:" + DEF[count]);
-            //Debug.Log("機体1:" + SPD[count]);
-
-            count++;
-
+        Name[count] = statusInfo.Name[SelectNum[count]];
+        HP[count] = statusInfo.HP[SelectNum[count]];
+        DEF[count] = statusInfo.DEF[SelectNum[count]];
+        SPD[count] = statusInfo.SPD[SelectNum[count]];
+        count++;
         //}
     }
 
-    // ボタンで選択されている機体判別処理 + プレビュー表示への移動
-    public void OnClick(int Num)
-    {
-        // 機体の数分だけ処理を追加していく
-        switch (Num)
-        {    
-            // 0は読まないからcase1からスタート
-            case 1:
-                SetData(Num);
-                Display(Num);
-                break;
-            case 2:
-                SetData(Num);
-                Display(Num);
-                break;
-            default:
-                break;
-        }
-    }
-
+    
     // プレビューに表示するための処理
-    private void Display(int number)
+    public void Display(int number)
     {
         NameText.text = statusInfo.Name[number];
         //NameText.SetText("{0}", statusInfo.Name[number]);

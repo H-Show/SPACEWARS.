@@ -31,6 +31,11 @@ public class ScenesManager : MonoBehaviour
         SceneManager.LoadScene("BaseCityScene");
     }
 
+    public void OnclickHenseiButton()
+    {
+        SceneManager.LoadScene("SelectScenes");
+    }
+
     public void OnClickBackButton(int Num)
     {
         switch (Num)
