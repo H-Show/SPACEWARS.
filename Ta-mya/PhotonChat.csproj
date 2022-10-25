@@ -53,19 +53,19 @@
     <UnityVersion>2021.2.18f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Photon\PhotonChat\Code\ChannelWellKnownProperties.cs" />
-    <Compile Include="Assets\Photon\PhotonChat\Code\ChatClient.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Code\ChatAppSettings.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Code\ChatParameterCode.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Code\ChatDisconnectCause.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Code\ChatUserStatus.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Code\ChatState.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Code\ChannelCreationOptions.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Code\ChannelWellKnownProperties.cs" />
+    <Compile Include="Assets\Photon\PhotonChat\Code\ChatClient.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Code\IChatClientListener.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Code\ChatEventCode.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Code\ChatOperationCode.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Code\ChatChannel.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Code\ChatPeer.cs" />
-    <Compile Include="Assets\Photon\PhotonChat\Code\ChannelCreationOptions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Photon\PhotonChat\Code\changes-chat.txt" />
@@ -339,8 +339,23 @@
     <Reference Include="Photon3Unity3D">
       <HintPath>Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Burst.Unsafe">
+      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Cecil.Mdb">
+      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Cecil.Pdb">
+      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Cecil">
+      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
+    </Reference>
     <Reference Include="log4netPlastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.15.13\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Cecil.Rocks">
+      <HintPath>Library\PackageCache\com.unity.burst@1.6.4\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Android.Types">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.2.18f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
