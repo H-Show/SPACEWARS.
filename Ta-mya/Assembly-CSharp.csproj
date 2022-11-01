@@ -59,7 +59,7 @@
     <Compile Include="Assets\MyFolder\Scripts\Battle\Turn.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\AppSettingsExtensions.cs" />
-    <Compile Include="Assets\MyFolder\Scripts\BuildingSet.cs" />
+    <Compile Include="Assets\MyFolder\Scripts\City\BuildingSet.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChannelSelector.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\EventSystemSpawner.cs" />
     <Compile Include="Assets\MyFolder\Scripts\Fomation\Development\test.cs" />
@@ -86,9 +86,10 @@
     <Compile Include="Assets\MyFolder\Scripts\Fomation\SelectShip\AnimationControl.cs" />
     <Compile Include="Assets\MyFolder\Scripts\Battle\FriendStatus.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextToggleIsOnTransition.cs" />
+    <Compile Include="Assets\MyFolder\Scripts\Title\CameraAxis.cs" />
     <Compile Include="Assets\MyFolder\Scripts\Fomation\SelectShip\FriendShipSelect.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
-    <Compile Include="Assets\MyFolder\Scripts\CityGameManager.cs" />
+    <Compile Include="Assets\MyFolder\Scripts\City\CityGameManager.cs" />
     <Compile Include="Assets\MyFolder\Scripts\Battle\CreateShip.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -102,6 +103,7 @@
     <None Include="Assets\Photon\PhotonLibs\WebSocket\websocket-sharp.dll" />
     <None Include="Assets\Asset\SpaceShip\StarSparrow\UpgradeHDRP\UpgradeHDRP.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\DeepSpaceSkyboxPack\GalaxyFire\Galaxy Fire Skybox Readme.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\Asset\Back\DiverseSpace\Diverse Space Skybox Readme.txt" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
@@ -118,6 +120,7 @@
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Photon\PhotonLibs\Metro\Photon3Unity3D.dll" />
     <None Include="Assets\Ground materials FD\Information package.txt" />
+    <None Include="Assets\DeepSpaceSkyboxPack\GalacticGreen\Galactic Green Skybox Readme.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Photon\PhotonLibs\Photon3Unity3D.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />

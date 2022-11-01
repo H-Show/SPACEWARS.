@@ -375,44 +375,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b157e1028fb0ee34280bf48e771b5100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  HP: 000000000000000000000000
-  DEF: 000000000000000000000000
-  SPD: 000000000000000000000000
-  NameText: {fileID: 1393519159}
-  HPText: {fileID: 757783889}
-  DEFText: {fileID: 1419891024}
-  SPDText: {fileID: 1380467148}
 --- !u!1 &180873263
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,7 +567,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Development
+  m_text: SpecialAttack
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -632,8 +594,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 18.4
+  m_fontSizeBase: 18.4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5358,8 +5320,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1578029389}
         m_TargetAssemblyTypeName: ScenesManager, Assembly-CSharp
-        m_MethodName: OnClickBackButton
-        m_Mode: 3
+        m_MethodName: OnclickHenseiButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5419,7 +5381,7 @@ GameObject:
   - component: {fileID: 1955332330}
   - component: {fileID: 1955332329}
   m_Layer: 5
-  m_Name: Development
+  m_Name: SpecialAttack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5492,7 +5454,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1578029389}
         m_TargetAssemblyTypeName: ScenesManager, Assembly-CSharp
-        m_MethodName: OnClickDevelopmentButton
+        m_MethodName: OnClickSelectSpecialAttackButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
