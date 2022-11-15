@@ -41,6 +41,11 @@ public class ScenesManager : MonoBehaviour
         SceneManager.LoadScene("BaseCityScene");
     }
 
+    public void OnclickBattleSelectButton()
+    {
+        SceneManager.LoadScene("BattleSelectScene");
+    }
+
     public void OnClickBackButton(int Num)
     {
         switch (Num)
