@@ -10,29 +10,46 @@ public class AnimationControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < animator.Length; i++)
-        {
-            // animatorコンポーネントを取得
-            //animator[i] = GetComponent<Animator>();
-            Debug.Log(animator[i]);
-        }
-        Select = GameObject.Find("Scroll View");
-        Debug.Log("++前の" + animator[Select.GetComponent<SelectShip>().Count]);
+
+        //Debug.Log("++前の" + animator[Select.GetComponent<SelectShip>().Count]);
     }
 
     // Update is called once per frame
     public void Update()
     {
-        
-        animator[num].SetBool("select", true);
+
+        //animator[num].SetBool("Special", true);
         //animator[Select.GetComponent<SelectShip>().Count].SetBool("select", true);
-        Debug.Log(Select.GetComponent<SelectShip>().Count);
-        Debug.Log("animation" + animator[Select.GetComponent<SelectShip>().Count]);
+        //Debug.Log(Select.GetComponent<SelectShip>().Count);
+        //Debug.Log("animation" + animator[Select.GetComponent<SelectShip>().Count]);
     }
 
-    public void AnimStop()
+
+    public void ShipAnimStart()
+    {
+        animator[num].SetBool("select", true);
+    }
+
+    public void ShipAnimStop()
     {
         animator[num].SetBool("select", false);
+
+        num++;
+
+        if (num >= 4)
+        {
+            num = 0;
+        }
+    }
+
+    public void SpAnimStart()
+    {
+        animator[num].SetBool("Special", true);
+    }
+
+    public void SpAnimStop()
+    {
+        animator[num].SetBool("Special", false);
 
         num++;
 
