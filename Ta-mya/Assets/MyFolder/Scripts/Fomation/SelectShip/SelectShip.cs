@@ -35,7 +35,6 @@ public class SelectShip : MonoBehaviour
         Count = 0;
         Loop = false;
 
-        animator[Count].SetBool("select", true);
         // プレビュー表示に使用
         Preview = GameObject.Find("ButtonCanvas");
         Button = GameObject.Find("Image");
@@ -44,6 +43,7 @@ public class SelectShip : MonoBehaviour
 
     private void Update()
     {
+        Button.GetComponent<AnimationControl>().ShipAnimStart();
         //animator[Count].SetBool("select", true);
     }
 
@@ -75,9 +75,8 @@ public class SelectShip : MonoBehaviour
         //image = GetComponent<Image>();
         image[Count].sprite = sprite[int.Parse(ShipNum)-1];
 
-        Button.GetComponent<AnimationControl>().AnimStop();
+        Button.GetComponent<AnimationControl>().ShipAnimStop();
 
-        Debug.Log("++前の"+animator[Count]);
 
         // カウントを進める
         Count++;
